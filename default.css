@@ -1,0 +1,165 @@
+:root {
+    --main-color: black;
+    --secondary-color: darkgrey;
+    --border-color: pink;
+    --main-text: white;
+    --secondary-text: green;
+}
+
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    color: var(--main-text);
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+}
+
+p,
+li,
+span,
+label,
+input,
+textarea {
+    color: var(--secondary-text);
+    font-family: 'Russo One', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: aqua;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+.section-1 {
+    background-color: var(--main-color);
+    border-bottom: 3px solid var(--border-color);
+    overflow: auto;
+}
+
+.section-2 {
+    background-color: var(--secondary-color);
+    border-bottom: 3px solid var(--border-color);
+    overflow: auto;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.greeting-wrapper {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    min-height: 10em;
+}
+
+.intro-section-wrapper {
+    background-color: var(--secondary-color);
+    border: 3px solid var(--border-color);
+    border-radius: 5px 5px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 30em;
+    grid-template-areas: 'nav-bar-wrapper nav-bar-wrapper' 'intro-left-wrapper intro-right-wrapper';
+}
+
+.nav-bar-wrapper {
+    grid-area: nav-bar-wrapper;
+    border-bottom: 3px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray;
+    border-radius: 5px 5px 0 0;
+}
+
+#contact-button {
+    margin: 0;
+    padding: 10px;
+}
+
+#contact-button li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.nav-bar-menu-wrapper {
+    display: flex;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.menu-item {
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+#menu-item-1 {
+    background-color: red;
+}
+
+#menu-item-2 {
+    background-color: yellow;
+}
+
+#menu-item-3 {
+    background-color: green;
+}
+
+.intro-left-wrapper {
+    grid-area: intro-left-wrapper;
+    border: 3px solid lightblue;
+}
+
+.intro-right-wrapper {
+    grid-area: intro-right-wrapper;
+    border: 3px solid lightblue;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 95%;
+    }
+}
